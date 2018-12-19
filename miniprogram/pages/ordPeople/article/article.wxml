@@ -1,0 +1,23 @@
+<!--miniprogram/pages/ordPeople/article/article.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">{{headline}}</view>
+        <view class="page__desc">{{intro}}</view>
+        <view class="weui-flex">
+                        <image class="weui-article__img" src="{{titleImg}}"  style="height: 180px;width:100%" />
+                    </view>
+    </view>
+    <text class="icon order"></text>
+    <view class="page__bd">
+        <view class="weui-article">
+          <block wx:for="{{segment}}" wx:key="id">
+            <view class="weui-article__h2">{{item.title}}</view>
+            <view class="weui-article__section">
+              <view class="weui-article__p">
+                {{item.content}}
+              </view>
+            </view>
+          </block>
+        </view>
+    </view>
+</view>

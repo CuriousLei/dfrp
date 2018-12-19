@@ -1,0 +1,10 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="section">
+  <view class="section__title">您的身份：</view>
+   <navigator url="/pages/ordPeople/article/article" class="a"><button class="weui-btn btn" type="primary" plain="true" bindtap="gotoPeo" > 普通群众 </button></navigator>
+  
+  <button class="weui-btn btn" type="primary" plain="true"> 业务部门 </button>
+  <button class="weui-btn btn" type="primary" plain="true"> 社会力量 </button>
+  <button class="weui-btn btn" type="primary" plain="true"> 保险市场 </button>
+</view>
+

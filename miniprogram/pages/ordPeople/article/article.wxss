@@ -1,0 +1,2 @@
+/* miniprogram/pages/ordPeople/article/article.wxss */
+@import '../peoIndex/peoIndex.wxss';

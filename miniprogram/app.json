@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/ordPeople/peoIndex/peoIndex",
+    "pages/login/login",
+    "pages/ordPeople/article/article",
+    "pages/ordPeople/ucenter/ucenter"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00bfaf",
+    "navigationBarTitleText": "泥石流风险防范要素发布平台",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#00bfaf",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/_shouye.png",
+        "iconPath": "images/shouye.png",
+        "pagePath": "pages/ordPeople/peoIndex/peoIndex",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/_gongdan.png",
+        "iconPath": "images/gongdan.png",
+        "pagePath": "pages/ordPeople/peoIndex/peoIndex",
+        "text": "资源服务"
+      },
+      {
+        "selectedIconPath": "images/_yuceyinqing.png",
+        "iconPath": "images/yuceyinqing.png",
+        "pagePath": "pages/ordPeople/peoIndex/peoIndex",
+        "text": "灾害预测"
+      },
+      {
+        "selectedIconPath": "images/_icon_zhanghao.png",
+        "iconPath": "images/icon_zhanghao.png",
+        "pagePath": "pages/ordPeople/ucenter/ucenter",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+<!--miniprogram/pages/peoIndex/peoIndex.wxml-->
+<scroll-view scroll-y="true" class="page">
+    
+    <view class="page__bd page__bd_spacing">
+        <view class="kind-list">
+            <block wx:for="{{list}}" wx:key="id">
+                <view id="{{item.id}}" class="kind-list__item" bindtap="toArticle">
+                    <view  class="weui-flex"> 
+                        <image class="kind-list__img" src="{{item.imgUrl}}"></image>
+                    </view> 
+                    <view  class="weui-flex">
+                        <view class="weui-cell__bd">{{item.name}}</view>
+                    </view>  
+                    <view  class="weui-flex">
+                        <view class="weui-article__p" >{{item.intro}}</view>
+                    </view>   
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="page__ft">
+
+    </view>
+</scroll-view>
