@@ -1,0 +1,64 @@
+<!--miniprogram/pages/reservice/disaState/disaState.wxml-->
+<!--miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml-->
+<!-- <text>miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml</text> -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block >
+                    <view  class="weui-navbar__item" bindtap="tabClick">
+                        <view class="weui-navbar__title">灾情</view>
+                    </view>
+                </block>
+                <!-- <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> -->
+            </view>
+            <view class="weui-tab__panel">
+                
+                <view class="weui-tab__content" >
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="40"
+                    longitude="116.3"
+                    scale='10'
+                    polygons='{{polygons}}'
+                    show-location
+                  ></map>
+                  <view class="page__hd"> 
+                    <view class="page__title">海淀灾区</view>
+                  </view>
+                  <view class="page__bd">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">遇难人数</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">112人</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">受伤人数</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">336人</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">失踪人数</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">221人</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">房屋损坏</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">1002间</view>
+                            </view>
+                        </view>
+                       
+                    </view>
+                  </view>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+</view>

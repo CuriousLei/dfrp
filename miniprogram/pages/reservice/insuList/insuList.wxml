@@ -1,0 +1,65 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">承保情况</view>
+        <view class="page__desc">各类保险产品的投保情况统计</view>
+    </view>
+    <view class="page__bd">
+
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd weui-media-box__title">大理方案</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">介绍</view>
+                    <view class="weui-article__p content">农房保险赔偿限额为 2800 万--42000万元，居民每人身故保险金额为 10 万元。户均保费为 39 元，由省、州、县三级财政承担全额保费。</view>
+                </view>
+                <view class="weui-media-box weui-media-box_text weui-flex">
+                    <!-- <view class="weui-flex"> -->
+                        <view class="weui-flex__item"><view class="placeholder">类型：</view></view>
+                        <view class="weui-flex__item"><view class="placeholder">巨灾保险</view></view>
+                    <!-- </view> -->
+                </view>
+                <view class="weui-media-box weui-media-box_text weui-flex">
+                    <!-- <view class="weui-flex"> -->
+                        <view class="weui-flex__item"><view class="placeholder">承保户数：</view></view>
+                        <view class="weui-flex__item"><view class="placeholder">82.1万户</view></view>
+                    <!-- </view> -->
+                </view>
+                <view class="weui-media-box weui-media-box_text weui-flex">
+                    <!-- <view class="weui-flex"> -->
+                        <view class="weui-flex__item"><view class="placeholder">承保居民数：</view></view>
+                        <view class="weui-flex__item"><view class="placeholder">23万人</view></view>
+                    <!-- </view> -->
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd weui-media-box__title">楚雄方案</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">介绍</view>
+                    <view class="weui-article__p content">农房损失每户保险金额为 2 万元，农村居民每人身故保险金额为10 万元，超过年累计赔偿限额的部分由财政巨灾
+风险基金承担或采用赔款比例回调方式。分别由省、州、县财政各承担相应比例的保费补贴，农户自付一定比例保费。</view>
+                </view>
+                <view class="weui-media-box weui-media-box_text weui-flex">
+                    <!-- <view class="weui-flex"> -->
+                        <view class="weui-flex__item"><view class="placeholder">类型：</view></view>
+                        <view class="weui-flex__item"><view class="placeholder">巨灾保险</view></view>
+                    <!-- </view> -->
+                </view>
+                <view class="weui-media-box weui-media-box_text weui-flex">
+                    <!-- <view class="weui-flex"> -->
+                        <view class="weui-flex__item"><view class="placeholder">承保户数：</view></view>
+                        <view class="weui-flex__item"><view class="placeholder">76.1万户</view></view>
+                    <!-- </view> -->
+                </view>
+                <view class="weui-media-box weui-media-box_text weui-flex">
+                    <!-- <view class="weui-flex"> -->
+                        <view class="weui-flex__item"><view class="placeholder">承保居民数：</view></view>
+                        <view class="weui-flex__item"><view class="placeholder">16万人</view></view>
+                    <!-- </view> -->
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

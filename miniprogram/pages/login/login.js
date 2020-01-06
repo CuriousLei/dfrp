@@ -8,85 +8,41 @@ Page({
   data: {
 
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(app.identity)
   },
+  changeIdentity:function(e){
+    console.log(e)
+    var idenId=e.currentTarget.dataset.id
+    var stateId=""
+    wx.request({
+      url: "https://debrisflow.cn/changeIdentity.php",
+      data: {'openid':app.openid, 'identity': idenId },
+      method: 'post',
+      header: { 'Content-Type': 'application/json' },
+      success: function (res) {
+        console.log(res)
+        app.btnIdList = res.data.data.btnList
+        app.artIdList = res.data.data.artList
+        stateId=res.data.state
+        app.situation = app.stateList[stateId]
+        app.identity = app.idenList[idenId]
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+        wx.navigateBack({
+          delta: -1
+        });
+      }
+    })
 
+    
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-
-  gotoPeo: function () {
-    const db = wx.cloud.database()
-    db.collection('loredb')
-      .limit(10) // 限制返回数量为 10 条
-      .get()
-      .then(res => {
-        var LT=res.data[0].loreTitle
-        app.globalData.loreTitle=LT
-        
-        wx.cloud.callFunction({
-          name: 'getLoreTitleImg',
-          data: { loreTitle: LT},
-          success: res => {
-            
-            app.globalData.loreTImg = res.result
-            // wx.navigateTo({
-            //   url: '../ordPeople/peoIndex/peoIndex',
-            // })
-          }
-        })
-      })
-    
+  onUnload: function (param) {
     
   }
 })

@@ -1,23 +1,32 @@
 <!--miniprogram/pages/ordPeople/ucenter/ucenter.wxml-->
 <view class="container">
   <view class="profile-info">
-    <image bindtap="onUserInfoClick" class="avatar" src="{{userInfo.avatar}}"></image>
+    <!-- <image bindtap="onUserInfoClick" class="avatar" src="../../../images/gongdan.png"></image> -->
+     <!-- <image bindtap="onUserInfoClick" class="avatar" ><open-data type="userAvatarUrl"></open-data></image> -->
+    <open-data class="avatar" style="overflow:hidden;margin-left:20px" type="userAvatarUrl"></open-data>
     <view class="info">
-      <text class='name' bindtap='onUserInfoClick'>答</text>
-      <!-- <text class='level' bindtap='onUserInfoClick'></text> -->
+    
+<open-data class='name' type="userNickName"></open-data>
+<open-data class ='area' type="userProvince"></open-data>
+<open-data class ='area' type="userCity"></open-data>
+      <!-- <text class='name' bindtap='onUserInfoClick'>答</text> -->
+      <!-- <text class='name' class='level' bindtap='onUserInfoClick'></text> -->
     </view>
-   
+   <view>
+    <text class="situ">{{identity}}</text>
+    <text class="situ">{{situation}}</text>
+   </view>
   </view>
 
   <view class="user-menu">
-    <view class="item">
-      <navigator url="/pages/ucenter/order/order" class="a">
+    <!-- <view class="item">
+      <navigator url="../peoIndex/peoIndex" class="a">
         <text class="icon order"></text>
         <text class="txt">灾害知识</text>
       </navigator>
     </view>
     <view class="item">
-      <navigator url="/pages/ucenter/coupon/coupon" class="a">
+      <navigator url="/pages/weather/weather" class="a">
         <text class="icon coupon"></text>
         <text class="txt">资源服务</text>
       </navigator>
@@ -25,34 +34,46 @@
     <view class="item no-border">
       <navigator url="url" class="a">
         <text class="icon gift"></text>
-        <text class="txt">礼品卡</text>
+        <text class="txt">灾害预测</text>
       </navigator>
     </view>
     <view class="item">
       <navigator url="/pages/ucenter/collect/collect" class="a">
         <text class="icon address"></text>
-        <text class="txt">我的收藏</text>
+        <text class="txt">灾害预警</text>
       </navigator>
     </view>
     <view class="item">
       <navigator url="/pages/ucenter/footprint/footprint" class="a">
         <text class="icon security"></text>
-        <text class="txt">我的足迹</text>
+        <text class="txt">帮助中心</text>
       </navigator>
     </view>
     <view class="item no-border">
       <navigator url="url" class="a">
         <text class="icon kefu"></text>
-        <text class="txt">会员福利</text>
+        <text class="txt">意见反馈</text>
       </navigator>
-    </view>
+    </view> -->
     <view class="item">
-      <navigator url="../address/address" class="a">
+      <navigator url="../../login/login" class="a">
         <text class="icon address"></text>
-        <text class="txt">地址管理</text>
+        <text class="txt">身份管理</text>
       </navigator>
     </view>
     <view class="item">
+      <navigator url="../../editInfo/editInfo" class="a">
+        <text class="icon security"></text>
+        <text class="txt">完善信息</text>
+      </navigator>
+    </view>
+    <!-- <view class="item">
+      <navigator url="../../index/index" class="a">
+        <text class="icon security"></text>
+        <text class="txt">授权登录</text>
+      </navigator>
+    </view> -->
+    <!-- <view class="item">
       <navigator url="url" class="a">
         <text class="icon security"></text>
         <text class="txt">账号安全</text>
@@ -63,30 +84,13 @@
         <text class="icon kefu"></text>
         <text class="txt">联系客服</text>
       </navigator>
-    </view>
-    <view class="item item-bottom">
-      <navigator url="url" class="a">
-        <text class="icon help"></text>
-        <text class="txt">帮助中心</text>
-      </navigator>
-    </view>
-    <view class="item item-bottom">
-      <navigator url="/pages/ucenter/feedback/feedback" class="a">
-        <text class="icon feedback"></text>
-        <text class="txt">意见反馈</text>
-      </navigator>
-    </view>
+    </view> -->
+    
+
   </view>
 
   <!-- <view class="logout" bindtap="exitLogin">退出登录</view> -->
 </view>
 
-<view class='dialog-login' wx:if="{{showLoginDialog}}" bindtap='onCloseLoginDialog'>
-  <view class='dialog-body' catchtap='onDialogBody'>
-    <view class='title'>请选择登录方式</view>
-    <view class='content'>
-      <button type="primary" open-type="getUserInfo" bindgetuserinfo="onWechatLogin">微信登录</button>
-      <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onWechatLogin">手机号登录</button>
-    </view>
-  </view>
-</view>
+<!-- <button class="weui-btn btn" type="primary" plain="true" style="margin:20px"  bindtap="test">heheh</button> -->
+

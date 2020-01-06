@@ -1,0 +1,144 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">四川凉山发生泥石流</view>
+        <view class="page__desc">2017年8月8日5时左右，四川凉山局地强降雨引发泥石流自然灾害。</view>
+    </view>
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__hd weui-media-box__title">当前热度</view>
+          <view class="weui-panel__bd">
+              <view class="weui-media-box weui-media-box_text weui-flex">
+                <view class="weui-flex__item">
+                  <view class="weui-progress">
+                    <view class="weui-progress__bar">
+                      <progress percent="50" stroke-width='12'></progress>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="weui-media-box weui-media-box_text weui-flex">
+                <view class="weui-flex__item"><view class="placeholder">持续时间</view></view>
+                <view ><view class="placeholder">2天7小时</view></view>
+              </view>
+              <view class="weui-media-box weui-media-box_text weui-flex">
+                <view class="weui-flex__item"><view class="placeholder">过去24小时传播速度</view></view>
+                <view ><view class="placeholder">1条/小时</view></view>
+              </view>
+              <view class="weui-media-box weui-media-box_text weui-flex">
+                <view class="weui-flex__item"><view class="placeholder">峰值传播速度</view></view>
+                <view ><view class="placeholder">83条/小时</view></view>
+              </view>
+          </view>
+      </view>
+      <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__hd weui-media-box__title">媒体观点</view>
+          <view class="weui-panel__bd">
+              <view class="weui-media-box weui-media-box_text weui-flex">
+                <view class="weui-flex__item"><view class="placeholder">1.数百警力赶赴普格泥石流灾区抢险救援</view></view>
+                <view ><view class="baodao">35家报道</view></view>
+              </view>
+              <view class="weui-media-box weui-media-box_text weui-flex">
+                <view class="weui-flex__item"><view class="placeholder">2.四川凉山普格县山洪自然灾害已造成24人死亡</view></view>
+                <view ><view class="baodao">25家报道</view></view>
+              </view>
+              <view class="weui-media-box weui-media-box_text weui-flex">
+                <view class="weui-flex__item"><view class="placeholder">3.四川普格泥石流灾害已致24人死亡1人成功获救</view></view>
+                <view ><view class="baodao">21家报道</view></view>
+              </view>
+          </view>
+      </view>
+      <view class="weui-panel weui-panel_access">
+          <view class="weui-panel__hd weui-media-box__title">人群画像</view>
+          <view class="weui-panel__bd">
+              <view class="weui-media-box weui-media-box_text ">
+                <view class="weui-media-box__title weui-media-box__title_in-text">性别</view>
+                <view class="weui-progress__bar" id="sex" >
+                  <progress percent="83" color="#40ceff" backgroundColor="#fd7079" stroke-width='20'></progress>
+                </view>
+                <view class='weui-flex'>
+                <view class="weui-media-box__desc weui-flex__item">男：83%</view>
+                <view class="weui-media-box__desc ">女：17%</view>
+                </view>
+              </view>
+              <view class="weui-media-box weui-media-box_text ">
+                <view class="weui-media-box__title weui-media-box__title_in-text">地域</view>
+                <view class="weui-flex">
+                  <view>
+                    四川
+                  </view>
+                  <view class="weui-flex__item" style='padding-top:5px;padding-left:5px;padding-right:5px'>
+                    <view class="weui-progress place" >
+                      <view class="weui-progress__bar">
+                        <progress percent="83" stroke-width='12'></progress>
+                      </view>
+                    </view>
+                  </view>
+                  <view>
+                    23.6%
+                  </view>
+                </view>
+                <view class="weui-flex">
+                  <view>
+                    北京
+                  </view>
+                  <view class="weui-flex__item" style='padding-top:5px;padding-left:5px;padding-right:5px'>
+                    <view class="weui-progress place" >
+                      <view class="weui-progress__bar">
+                        <progress percent="30" stroke-width='12'></progress>
+                      </view>
+                    </view>
+                  </view>
+                  <view>
+                    10.5%
+                  </view>
+                </view>
+                <view class="weui-flex">
+                  <view>
+                    广东
+                  </view>
+                  <view class="weui-flex__item" style='padding-top:5px;padding-left:5px;padding-right:5px'>
+                    <view class="weui-progress place" >
+                      <view class="weui-progress__bar">
+                        <progress percent="25" stroke-width='12'></progress>
+                      </view>
+                    </view>
+                  </view>
+                  <view>
+                    7.1%
+                  </view>
+                </view>
+                <view class="weui-flex">
+                  <view>
+                    江苏
+                  </view>
+                  <view class="weui-flex__item" style='padding-top:5px;padding-left:5px;padding-right:5px'>
+                    <view class="weui-progress place" >
+                      <view class="weui-progress__bar">
+                        <progress percent="10" stroke-width='12'></progress>
+                      </view>
+                    </view>
+                  </view>
+                  <view>
+                    5.1%
+                  </view>
+                </view>
+                <view class="weui-flex">
+                  <view>
+                    浙江
+                  </view>
+                  <view class="weui-flex__item" style='padding-top:5px;padding-left:5px;padding-right:5px'>
+                    <view class="weui-progress place" >
+                      <view class="weui-progress__bar">
+                        <progress percent="9" stroke-width='12'></progress>
+                      </view>
+                    </view>
+                  </view>
+                  <view>
+                    4.9%
+                  </view>
+                </view>
+              </view>
+          </view>
+      </view>
+    </view>
+</view>

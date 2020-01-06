@@ -1,0 +1,68 @@
+<view class="container"  catchtap='menuHide'>
+ <!-- <image class='bcg' src='{{bcgImg}}' mode='aspectFill'></image> -->
+  <view class='content'  style='margin-top: {{setting.hiddenSearch ? 20 : 60}}px'>
+    <!-- <view class='avatarInfo' catchtap='showBcgImgArea'>
+      <open-data class='avatar' type='userAvatarUrl'></open-data>
+      <open-data class='name' type='userNickName'></open-data> -->
+      <!-- <image class='downArrow' src='/img/down.png'></image> -->
+    <!-- </view> -->
+    <view class='info'>
+      <view class='city'>
+        <view class='name' bindtap='toCitychoose'>
+          <!-- <image wx:if='{{located}}' class='icon' src='/img/location_s_w.png'></image> -->
+          <view class='val'>舟曲县</view>
+          <!-- <image class='down' src='/img/down.png'></image> -->
+        </view>
+        <view class="weui-cell__hd" style="display:inline-block">
+          <image src="../../images/place.png" style="margin-right: 5px;vertical-align: middle;width:35px; height: 35px;"></image>
+        </view>
+        <!-- <text class='time' wx:if='{{cityDatas.updateTimeFormat}}'>{{cityDatas.updateTimeFormat}} 更新</text> -->
+      </view>
+      
+      <!-- <view class='message'>{{message}}</view>
+      <view class='temp num' decode='true'>{{cityDatas.now.tmp || '-'}}<text style='font-size:50rpx;position:relative;top:-20px;'>℃</text></view>
+      <view class='weather'>{{cityDatas.now.cond_txt || '--'}}</view> -->
+
+      <view class='temp num'>
+<ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}" style="height:100%;width:100%;"></ec-canvas>
+      </view>
+      <view class='pm'>
+        <text>日期： {{date}}</text>
+      </view>
+      <view class='pm'>
+        <text>更新时间： {{uptime}}</text>
+      </view>
+      <!-- <view class='pm'>
+        <text>天气： {{weatherData.weatherDesc}}</text>
+      </view>
+      <view class='pm'>
+        <text>气温： {{weatherData.temperature}}</text>
+      </view>
+      <view class='pm'>
+        <text>pm2.5： {{weatherData.pm25}}</text>
+      </view>
+      <view class='pm'>
+        <text>风力： {{weatherData.wind}}</text>
+      </view> -->
+      <view class="weui-grids">
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="" class="weui-grid" >
+                    <view class="weui-grid__label">{{factor[item]}}</view>
+                    <view class="weui-grid__label">{{values[item]}}</view>
+                </navigator>
+            </block>
+      </view>
+    </view>
+    
+    <view class='s_temp num'>
+      <ec-canvas id="mychart-dom-multi-water" canvas-id="mychart-multi-water" ec="{{ ecScatter }}" ></ec-canvas>
+    </view>
+    <view class='s_temp num'>
+      <ec-canvas id="mychart-dom-multi-soil" canvas-id="mychart-multi-soil" ec="{{ ecSoil }}" ></ec-canvas>
+    </view>
+    <view class='footer'>提供者 · 百度开放平台API</view>
+     
+  </view>
+
+
+</view>

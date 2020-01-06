@@ -1,0 +1,58 @@
+<!--miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml-->
+<!-- <text>miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml</text> -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block >
+                    <view  class="weui-navbar__item" bindtap="tabClick">
+                        <view class="weui-navbar__title">医院</view>
+                    </view>
+                </block>
+                <!-- <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> -->
+            </view>
+            <view class="weui-tab__panel">
+                
+                <view class="weui-tab__content" >
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="40"
+                    longitude="116.3"
+                    scale='11'
+                    markers="{{hosMarkers}}"
+                    polygons='{{polygons}}'
+                    show-location
+                  ></map>
+                  <view class="page__hd"> 
+                    <view class="weui-media-box__title" style='padding: 15px;'>您附近的医院（收纳人数比例）</view>
+                  </view>
+                  <view class="page__bd">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">海淀医院</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">95%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">北医三院</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">65%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">朝阳医院</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">90%</view>
+                            </view>
+                        </view>
+                       
+                    </view>
+                  </view>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+</view>

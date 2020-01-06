@@ -1,0 +1,5 @@
+/* miniprogram/pages/reservice/insuList/insuList.wxss */
+@import '../../ordPeople/peoIndex/peoIndex.wxss';
+.content{
+  font-size:15px;
+}

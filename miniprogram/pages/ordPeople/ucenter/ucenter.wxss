@@ -20,6 +20,10 @@ page{
   padding: 0 30.25rpx;
   background: #00bfaf;
 }
+.situ{
+ color: #f4f4f4;
+ margin-right: 5px;
+}
 
 .profile-info .avatar {
   height: 148rpx;
@@ -197,4 +201,10 @@ page{
 
 .dialog-login .dialog-body button{
   margin-top: 30rpx;
+}
+.area{
+  font-size: 12px;
+  color: #e3e4e5;
+  width: 40%;
+  display: inline-block;
 }

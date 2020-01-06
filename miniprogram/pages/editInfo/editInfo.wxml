@@ -1,0 +1,26 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">完善资料</view>
+        
+    </view>
+    <view class="page__bd">
+        <!-- <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view> -->
+      <form bindsubmit="submit">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">手机号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="phone" placeholder="请输入手机号"/>
+                </view>
+            </view>
+        </view>
+       
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" formType="submit">确定</button>
+        </view>
+      </form>
+    </view>
+</view>

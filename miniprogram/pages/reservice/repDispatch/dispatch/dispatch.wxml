@@ -1,0 +1,42 @@
+<page>
+<view class="page">
+  <map
+    id="myMap"
+    style="width: 100%; height: 300px;"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    markers="{{markers}}"
+    scale='{{scale}}'
+    polygons='{{polygons}}'
+    polyline='{{polyline}}'
+  ></map>
+  <view class="page__hd"> 
+    <view class="page__title">{{name}}</view>
+    
+  </view>
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__bd">
+        <view class="listview-container">
+          <block wx:for="{{newsList}}" wx:key="">
+            <view class="playlog-item" bindtap="itemTapped">
+              <view class="dotline">
+                <!-- 竖线 -->
+                <view class="line"></view>
+                <!-- 圆点 -->
+                <view class="dot"></view>
+                <!-- 时间戳 -->
+              </view>
+              <view class="content">
+                <text class="course">{{item.time}}</text>
+                <text class="chapter">{{item.content}}</text>
+              </view>
+            </view>
+            <ad unit-id="adunit-5abb45645905fc90" wx:if="{{index % 5 == 4}}"></ad>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</page>

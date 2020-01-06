@@ -1,0 +1,23 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">理赔预估</view>
+        <view class="page__desc">根据灾评结果粗略计算保险赔款金额</view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+      <view class="weui-flex">
+          <view class="weui-flex__item"><view class="placeholder">民房损失</view></view>
+          <view class="weui-flex__item"><view class="placeholder">----------</view></view>
+          <view class="weui-flex__item"><view class="placeholder">4.2亿元</view></view>
+      </view>
+      <view class="weui-flex">
+          <view class="weui-flex__item"><view class="placeholder">家财损失</view></view>
+          <view class="weui-flex__item"><view class="placeholder">----------</view></view>
+          <view class="weui-flex__item"><view class="placeholder">2.3亿元</view></view>
+      </view>
+      <view class="weui-flex">
+          <view class="weui-flex__item"><view class="placeholder">人身身故</view></view>
+          <view class="weui-flex__item"><view class="placeholder">----------</view></view>
+          <view class="weui-flex__item"><view class="placeholder">0.8亿元</view></view>
+      </view>
+    </view>
+</view>

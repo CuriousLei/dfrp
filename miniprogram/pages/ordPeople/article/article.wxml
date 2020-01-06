@@ -13,9 +13,20 @@
           <block wx:for="{{segment}}" wx:key="id">
             <view class="weui-article__h2">{{item.title}}</view>
             <view class="weui-article__section">
-              <view class="weui-article__p">
+            <view wx:if="{{item.type==1?true:false}}">
+              <view class="weui-article__p" wx:for="{{item.content}}" wx:for-item="content" wx:key="id">
+                {{content}}
+              </view>
+            </view>
+            <view wx:elif="{{item.type==2?true:false}}">
+              <image class="weui-article__img" src="{{item.content}}"  style="height: 250px;width:100%" />
+            </view>
+            <view wx:else>
+              <view class="weui-article__p" >
                 {{item.content}}
               </view>
+            </view>
+              
             </view>
           </block>
         </view>

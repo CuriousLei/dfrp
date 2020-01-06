@@ -1,6 +1,8 @@
 <!--miniprogram/pages/peoIndex/peoIndex.wxml-->
 <scroll-view scroll-y="true" class="page">
-    
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
     <view class="page__bd page__bd_spacing">
         <view class="kind-list">
             <block wx:for="{{list}}" wx:key="id">
@@ -17,6 +19,7 @@
                 </view>
             </block>
         </view>
+        
     </view>
     <view class="page__ft">
 

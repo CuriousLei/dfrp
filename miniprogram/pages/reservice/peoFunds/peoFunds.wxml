@@ -1,0 +1,54 @@
+<!--miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml-->
+<!-- <text>miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml</text> -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block >
+                    <view  class="weui-navbar__item" bindtap="tabClick">
+                        <view class="weui-navbar__title">募捐通道</view>
+                    </view>
+                </block>
+                <!-- <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> -->
+            </view>
+            <view class="weui-tab__panel">
+                
+                <view class="weui-tab__content" >
+                 
+ <view class="weui-panel weui-panel_access">
+                  <view class="weui-panel__hd">中国红十字会</view>
+                  <view class="weui-panel__bd">
+                      <navigator url="" data-url="http://www.redcross.org.cn/html/hszjz/index.html" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="externalLink">
+                     
+                          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                              <image class="weui-media-box__thumb" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552475301986&di=eb9c33f095202c06266467eaad080c2a&imgtype=0&src=http%3A%2F%2Fwww.hainan.gov.cn%2Fszfbgt%2Fyjb%2Fgzfw%2Flssj%2F201605%2FW020160509350164917563.jpg" />
+                          </view>
+                          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                              <view class="weui-media-box__title">捐赠方式</view>
+                              <view class="weui-media-box__desc">捐赠方式：短信捐款、银行转账、网上捐款、邮局汇款、现场捐赠</view>
+                          </view>
+                      </navigator>
+                      <navigator url="" data-url="https://mv.lingxi360.com/m/zjgw7x?utm_bccid=LXEhue1n" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="externalLink">
+                          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                              <image class="weui-media-box__thumb" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552475301986&di=eb9c33f095202c06266467eaad080c2a&imgtype=0&src=http%3A%2F%2Fwww.hainan.gov.cn%2Fszfbgt%2Fyjb%2Fgzfw%2Flssj%2F201605%2FW020160509350164917563.jpg" />
+                          </view>
+                          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                              <view class="weui-media-box__title">我要捐赠</view>
+                              <view class="weui-media-box__desc">感谢您对红十字事业的支持！</view>
+                          </view>
+                      </navigator>
+                  </view>
+                  <view class="weui-panel__ft">
+                      <view class="weui-cell weui-cell_access weui-cell_link" data-url="http://www.redcross.org.cn/" bindtap="externalLink">
+                          <view class="weui-cell__bd">查看更多</view>
+                          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                      </view>
+                  </view>
+                  
+                </view>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+</view>

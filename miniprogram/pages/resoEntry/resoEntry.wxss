@@ -1,0 +1,11 @@
+/* miniprogram/pages/resoEntry/resoEntry.wxss */
+@import '../ordPeople/peoIndex/peoIndex.wxss';
+.btn{
+  margin: 50px;
+  
+}
+.section__title{
+
+  margin-top: 20px;
+  color: #179b16
+}

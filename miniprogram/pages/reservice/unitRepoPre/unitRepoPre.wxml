@@ -1,0 +1,46 @@
+<!--miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml-->
+<!-- <text>miniprogram/pages/reservice/unitRepoPre/unitRepoPre.wxml</text> -->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block >
+                    <view  class="weui-navbar__item" bindtap="tabClick">
+                        <view class="weui-navbar__title">存储库</view>
+                    </view>
+                </block>
+                <!-- <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> -->
+            </view>
+            <view class="weui-tab__panel">
+                
+                <view class="weui-tab__content" >
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="{{latitude}}"
+                    longitude="{{longitude}}"
+                    markers="{{markers}}"
+                    scale='{{scale}}'
+                    show-location
+                  ></map>
+                  
+                  <view class="page__bd">
+                    <view class="weui-cells weui-cells_after-title">
+                        <radio-group bindchange="radioChange"  >
+                            <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value" bindtap="toStoreInfo" data-id="{{item.value}}" data-name="{{item.name}}">
+                                <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                                <view class="weui-cell__bd">{{item.name}}</view>
+                                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                                    <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                                </view>
+                            </label>
+                        </radio-group>
+                    </view>
+                  </view>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+</view>

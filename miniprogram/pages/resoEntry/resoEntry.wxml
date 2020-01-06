@@ -1,0 +1,9 @@
+<page>
+  <view class="page__hd">
+      <view class="page__title">资源服务</view>
+      <view class="page__desc">请选择一种资源服务</view>
+  </view>
+  <view class="section__title"  wx:for="{{btnList}}" wx:key="item"> 
+    <button class="weui-btn btn items" type="primary" plain="true" bindtap="gotoreso" data-navi="{{item.navi}}">{{item.name}}</button>
+  </view>
+</page>

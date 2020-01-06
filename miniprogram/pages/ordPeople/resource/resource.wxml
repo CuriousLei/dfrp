@@ -1,0 +1,241 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{actIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <!-- <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view> -->
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                <view class="page disaster">
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="40"
+                    longitude="116.3"
+                    scale='10'
+                    markers="{{rescueMarkers}}"
+                    polygons='{{polygons}}'
+                  ></map>
+                  <view class="page__hd"> 
+                    <view class="weui-media-box__title" style='padding: 15px;'>灾区周围的救援点（救援人数比例）</view>
+                  </view>
+                  <view class="page__bd">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">武警交通第六支队</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">85%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">民工部队</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">65%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">第三军工团</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">70%</view>
+                            </view>
+                        </view>
+                       
+                    </view>
+                  </view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="{{latitude}}"
+                    longitude="{{longitude}}"
+                    markers="{{markers}}"
+                    scale='{{scale}}'
+                    show-location
+                  ></map>
+                  
+                  <view class="page__bd">
+                    <view class="weui-cells weui-cells_after-title">
+                        <radio-group bindchange="radioChange"  >
+                            <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value" bindtap="toStoreInfo" data-id="{{item.value}}" data-name="{{item.name}}">
+                                <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                                <view class="weui-cell__bd">{{item.name}}</view>
+                                <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                                    <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                                </view>
+                            </label>
+                        </radio-group>
+                    </view>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <view class="page disaster">
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="40"
+                    longitude="116.3"
+                    scale='10'
+                    markers="{{placementMarkers}}"
+                    polygons='{{polygons}}'
+                    show-location
+                  ></map>
+                  <view class="page__hd"> 
+                    <view class="weui-media-box__title" style='padding: 15px;'>灾区周围的安置点（收纳人数比例）</view>
+                  </view>
+                  <view class="page__bd">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">1号安置点</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">79%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">2号安置点</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">65%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">3号安置点</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">88%</view>
+                            </view>
+                        </view>
+                       
+                    </view>
+                  </view>
+                </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                <view class="page disaster">
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="40"
+                    longitude="116.3"
+                    scale='10'
+                    polygons='{{polygons}}'
+                    show-location
+                  ></map>
+                  <view class="page__hd"> 
+                    <view class="page__title">后城灾区</view>
+                  </view>
+                  <view class="page__bd">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">遇难人数</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">112人</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">受伤人数</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">336人</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">失踪人数</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">221人</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">房屋损坏</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">1002间</view>
+                            </view>
+                        </view>
+                       
+                    </view>
+                  </view>
+                </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
+                <view class="page disaster">
+                  <map
+                    id="myMap"
+                    style="width: 100%; height: 300px;"
+                    latitude="40"
+                    longitude="116.3"
+                    scale='11'
+                    markers="{{hosMarkers}}"
+                    polygons='{{polygons}}'
+                    show-location
+                  ></map>
+                  <view class="page__hd"> 
+                    <view class="weui-media-box__title" style='padding: 15px;'>您附近的医院（收纳人数比例）</view>
+                  </view>
+                  <view class="page__bd">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">海淀医院</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">95%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">北医三院</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">65%</view>
+                            </view>
+                        </view>
+                        <view class="weui-panel__hd">朝阳医院</view>
+                        <view class="weui-panel__bd">
+                            <view class="weui-media-box weui-media-box_text">
+                                <view class="weui-media-box__title weui-media-box__title_in-text">90%</view>
+                            </view>
+                        </view>
+                       
+                    </view>
+                  </view>
+                </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 5}}">
+                <view class="page__bd">
+                  <view class="weui-panel weui-panel_access">
+                  <view class="weui-panel__hd">中国红十字会</view>
+                  <view class="weui-panel__bd">
+                      <navigator url="" data-url="http://www.redcross.org.cn/html/hszjz/index.html" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="externalLink">
+                     
+                          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                              <image class="weui-media-box__thumb" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552475301986&di=eb9c33f095202c06266467eaad080c2a&imgtype=0&src=http%3A%2F%2Fwww.hainan.gov.cn%2Fszfbgt%2Fyjb%2Fgzfw%2Flssj%2F201605%2FW020160509350164917563.jpg" />
+                          </view>
+                          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                              <view class="weui-media-box__title">捐赠方式</view>
+                              <view class="weui-media-box__desc">感谢您的爱心捐款！您10元及以下的捐款将进入网上募捐箱，汇聚统一用于符合红十字宗旨的人道公益事业。</view>
+                          </view>
+                      </navigator>
+                      <navigator url="" data-url="https://mv.lingxi360.com/m/zjgw7x?utm_bccid=LXEhue1n" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="externalLink">
+                          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                              <image class="weui-media-box__thumb" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552475301986&di=eb9c33f095202c06266467eaad080c2a&imgtype=0&src=http%3A%2F%2Fwww.hainan.gov.cn%2Fszfbgt%2Fyjb%2Fgzfw%2Flssj%2F201605%2FW020160509350164917563.jpg" />
+                          </view>
+                          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                              <view class="weui-media-box__title">我要捐赠</view>
+                              <view class="weui-media-box__desc">感谢您对红十字事业的支持！</view>
+                          </view>
+                      </navigator>
+                  </view>
+                  <view class="weui-panel__ft">
+                      <view class="weui-cell weui-cell_access weui-cell_link" data-url="http://www.redcross.org.cn/" bindtap="externalLink">
+                          <view class="weui-cell__bd">查看更多</view>
+                          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                      </view>
+                  </view>
+                  
+                </view>
+              </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

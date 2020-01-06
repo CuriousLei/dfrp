@@ -1,0 +1,19 @@
+<!--pages/ordPeople/predict/precdict.wxml-->
+<view class="container">
+
+  <view class="" style='z-index:999;background-color:#333333;width:100%;line-height:2;border-color:#333333;padding:20px'>
+    <view class="weui-cell__bd" style="color:#e3e4e5;display:inline-block;margin-left:40%">海淀区</view>
+    <view class="weui-cell__hd" style="display:inline-block">
+      <image src="../../../images/place.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd" style="color:#bfbfbf;font-size:10px;margin-left:35%">上次更新时间：下午3:45</view>
+  </view>
+  <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}" style="height:280px;margin-top:90px"></ec-canvas>
+  <view class="divLine" style="margin-top:70%"></view>
+  <ec-canvas id="mychart-dom-multi-water" canvas-id="mychart-multi-water" ec="{{ ecScatter }}" ></ec-canvas>
+  <view class="divLine" style="margin-top:30%"></view>
+  <ec-canvas id="mychart-dom-multi-soil" canvas-id="mychart-multi-soil" ec="{{ ecSoil }}" ></ec-canvas>
+  <view class="weather">
+  <text>{{weatherData}}</text>
+  </view>
+</view>

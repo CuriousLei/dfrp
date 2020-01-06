@@ -1,0 +1,10 @@
+/* miniprogram/pages/index/index.wxss */
+.weui-flex{
+  margin-bottom: 20px;
+}
+.weui-btn{
+  width: 60%;
+}
+#head{
+  margin-top: 30%; 
+}
